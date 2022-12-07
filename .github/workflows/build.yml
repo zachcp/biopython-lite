@@ -25,9 +25,9 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: biopython-pyodide.whl
-          asset_name: mything
+          asset_name: biopython-pyodide.whl
           overwrite: true
           body: "Upload to GitHub"
-          # tag: ${{ github.ref }}
+          tag: ${{ github.ref }}
           
     
