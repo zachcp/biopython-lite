@@ -40,10 +40,14 @@ build: trim
 	cp resources/MANIFEST.in biopython-biopython-$(TAG)/MANIFEST.in
 	cd biopython-biopython-$(TAG) && pyodide build .
 
+
 biopython-pyodide-$(TAG)-$(BUILD).whl: build
 	cp biopython-biopython-$(TAG)/dist/biopython-*-py3-none-any.whl biopython-pyodide-$(TAG)-$(BUILD).whl
+	cp biopython-biopython-$(TAG)/dist/biopython-*-py3-none-any.whl biopython-pyodide.whl
+
 
 wheel: biopython-pyodide-$(TAG)-$(BUILD).whl
+
 
 clean:
 	rm -rf biopython-biopython-$(TAG)
